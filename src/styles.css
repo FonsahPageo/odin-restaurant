@@ -1,0 +1,12 @@
+input[type="button"]{
+    padding: 5px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    float: right;
+}
