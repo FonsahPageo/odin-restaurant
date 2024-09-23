@@ -12,7 +12,7 @@ module.exports = {
     },
     devtool: "eval-source-map",
     devServer: {
-        watchFiles: ["./src/index.html"],
+        watchFiles: ["./src/index.html", "./src/styles.css"],
         static: path.join(__dirname, "dist"),
         compress: true,
         port: 8080,
@@ -28,22 +28,9 @@ module.exports = {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
-            // {
-            //     test: /\.html$/i,
-            //     loader: "html-loader",
-            // },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
-                // use: [
-                //     {
-                //         loader: "file-loader",
-                //         options: {
-                //             name: "[path][name].[ext]",
-                //             contect: "src",
-                //         },
-                //     },
-                // ],
             },
         ],
     },
