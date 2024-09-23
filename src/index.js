@@ -1,16 +1,22 @@
 import "./styles.css";
-import restaurantImage from "./assets/restaurant.jpg";
+import loadHome from "./modules/home.js";
+import loadMenu from "./modules/menu.js";
+import loadContact from "./modules/contact.js";
 
-const headline = document.createElement("h3");
-headline.textContent = "Welcome to Fonsah's Restaurant where expectations meet reality";
-document.getElementById("content").appendChild(headline);
+const contentDiv = document.getElementById("content");
+contentDiv.appendChild(loadHome());
 
-const imgElement = document.createElement("img");
-imgElement.src =  restaurantImage;
-document.getElementById("content").appendChild(imgElement);
+document.getElementById("homeBtn").addEventListener("click", () => {
+    contentDiv.innerHTML = "";
+    contentDiv.appendChild(loadHome());
+});
 
-const description = document.createElement("p");
-description.textContent = "This is a description of the restaurant";
-document.getElementById("content").appendChild(description);
+document.getElementById("menuBtn").addEventListener("click", () => {
+    contentDiv.innerHTML = "";
+    contentDiv.appendChild(loadMenu());
+});
 
-console.log("Welcome to Fonsah's restaurant");
+document.getElementById("contactBtn").addEventListener("click", () => {
+    contentDiv.innerHTML = "";
+    contentDiv.appendChild(loadContact());
+});
