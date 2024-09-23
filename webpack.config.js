@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
-        // publicPath: "/",
+        publicPath: "/",
         clean: true,
     },
     devtool: "eval-source-map",
@@ -28,22 +28,22 @@ module.exports = {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
-            {
-                test: /\.html$/i,
-                loader: "html-loader",
-            },
+            // {
+            //     test: /\.html$/i,
+            //     loader: "html-loader",
+            // },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[path][name].[ext]",
-                            contect: "src",
-                        },
-                    },
-                ],
+                // use: [
+                //     {
+                //         loader: "file-loader",
+                //         options: {
+                //             name: "[path][name].[ext]",
+                //             contect: "src",
+                //         },
+                //     },
+                // ],
             },
         ],
     },
