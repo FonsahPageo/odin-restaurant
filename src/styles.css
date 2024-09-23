@@ -22,3 +22,12 @@ nav{
     width: 500px;
     height: 350px;
 }
+
+ul{
+    list-style-type: none;
+    padding: 20px;
+}
+
+ul li{
+    padding: 5px;
+}
