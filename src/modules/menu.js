@@ -1,9 +1,11 @@
 export default function loadMenu() {
     const menuDiv = document.createElement("div");
+    menuDiv.classList.add("food-menu");
     const menuHeadline = document.createElement("h3");
     menuHeadline.textContent = "Menu";
 
     const menuItems = document.createElement("ul");
+    menuItems
     menuItems.innerHTML = `
         <li>Pasta - $12</li>
         <li>Pizza - $18</li>
